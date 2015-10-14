@@ -69,6 +69,10 @@
     <access origin="*"/>
 
 	<access origin="127.0.0.1*"/>
+	
+ <access origin="http://rewardsboxnigeria.com/demodiscount/mobi*"/>
+ <plugin name="cordova-plugin-whitelist" version="1" />
+    <allow-intent href="http://*/*" />
    
 
 
