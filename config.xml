@@ -3,17 +3,17 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.etisalat.app"
+        id        = "com.etisalat.lms"
         version   = "1.0.0">
 
-    <name>Etisalat Loyalty</name>
+    <name>Etisalat</name>
 
     <description>
-        Etisalat Loyalty a lifestyle app that connects you to partners around the world offering you discounts and gift
+        Etisalat a lifestyle app that connects you to partners around the world offering you discounts and gift
     </description>
 
-    <author href="http://etisalat.com" email="info@etisalat.com">
-        Glo Prive
+    <author href="http://etisalat.com/ng" email="info@etisalat.com">
+        Airtel
     </author>
 	
 	<feature name="http://api.phonegap.com/1.0/device" />
@@ -30,9 +30,9 @@
     <!-- Core plugins -->
     
     
-  <gap:plugin name="org.apache.cordova.dialogs" />
-  <gap:plugin name="org.apache.cordova.inappbrowser" />
-  <gap:plugin name="org.apache.cordova.splashscreen" /> 
+    <!--<gap:plugin name="org.apache.cordova.dialogs" source="npm" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" source="npm" />
+    <gap:plugin name="org.apache.cordova.splashscreen" source="npm" /> -->
  
 
    
@@ -67,7 +67,9 @@
   
 
     <access origin="*"/>
-    <access origin="127.0.0.1*"/>
+
+	<access origin="127.0.0.1*"/>
    
+
 
 </widget>
