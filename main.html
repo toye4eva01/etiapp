@@ -118,7 +118,7 @@ $('#noteno').load('http://rewardsboxnigeria.com/demodiscount/mobi/notifycount.ph
         // Set timeout variables.
         var timoutWarning = 60000; // Display warning in 1Mins.
         var timoutNow = 900000; // Timeout in 15 mins.
-        var logoutUrl = 'logout3.php'; // URL to logout page.
+        //var logoutUrl = 'logout3.php'; // URL to logout page.
 
         var warningTimer;
         var timeoutTimer;
@@ -146,7 +146,25 @@ $('#noteno').load('http://rewardsboxnigeria.com/demodiscount/mobi/notifycount.ph
 
         // Logout the user.
         function IdleTimeout() {
-            window.location = logoutUrl;
+        	
+        	
+        	$.ajax({
+									//type: "POST",
+									url: "http://rewardsboxnigeria.com/demodiscount/mobi/logout3.php",
+									//data: $("#contact").serialize(),
+									//data: {name:name, email:email, message:message},
+																		
+									success: function(msg){
+									(msg); 
+									$('#loggout').html("You have been Logged out");
+									window.location.replace('index.html');
+																												
+									}	
+	
+
+
+});
+           // window.location = logoutUrl;
         }
     
 </script>
