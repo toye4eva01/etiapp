@@ -6,7 +6,7 @@
         id        = "com.etisalat.lms"
         version   = "1.0.0">
 
-    <name>Etisalat</name>
+    <name>Etisalat loyalty</name>
 
     <description>
         Etisalat a lifestyle app that connects you to partners around the world offering you discounts and gift
@@ -70,9 +70,6 @@
 
 	<access origin="127.0.0.1*"/>
 	
- <access origin="http://rewardsboxnigeria.com/demodiscount/mobi*"/>
- <plugin name="cordova-plugin-whitelist" version="1" />
-    <allow-intent href="http://*/*" />
    
 
 
