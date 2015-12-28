@@ -102,8 +102,8 @@
 
 <script>
 $(document).ready(function(e) {
-
-//$(document).ready(function(e) {
+    
+//});
 var storedvalue = localStorage.getItem('text');
 var storedvalue2 = localStorage.getItem('password');
 
@@ -112,43 +112,73 @@ if(storedvalue){
 	//document.getElementById('password').value = storedvalue2;
 	var username = storedvalue;
 	var password = storedvalue2;
-//alert("say GO");
-$.ajax({
+	
+}
+	
+		
+		
+		
+
+//});
+	$('#login').click(function(){
+	var username = $('#username').val();
+	var	password = $('#password').val();
+	if (username == "")
+	{
+		alert("Enter Your username");
+		return false;
+	}
+	else if (password == "")
+	{
+		alert("Enter Your password");
+
+	return false;
+	}
+ 
+  
+	else{
+		//alert("say GO");
+		$.ajax({
 			type:"POST",
 			url:"http://rewardsboxnigeria.com/demodiscount/mobi/loginscript.php",
 			data:{username:username, password:password},
 			dataType:"json",
 			success: function(msg){
-				if (msg.sucess == false) {
+				
+				if (msg.success == false) {
 											alert("There was an error submitting the form. Please try again.");
 											} else {
 												if (msg.status ==1001){
+												 var usernamevalue = document.getElementById('username').value;
+  													localStorage.setItem('text', usernamevalue);
+ 												 var passwordvalue = document.getElementById('password').value;
+				  									localStorage.setItem('password', passwordvalue);
 												window.location.replace('main.html');
 												}
-											
+												//else if (msg.status ==1002){
+													//alert(msg.memberid);
+												//	window.location.replace('changepassword.html', function() {
+												//	$('#hmemberid').val(msg.memberid);
+												//	});
+												//}
 												else {
 
-												window.location.replace('login.html');
-												}	
-										}
+												alert(msg.status);
+
+
+			$('#username').val('');
+			$('#password').val('');
+			}								}
 	}
 		});
-	//	return false;	
-}
-	
-	else {
-
-												window.location.replace('login.html');
+		return false;
 	}
-		
-		
-
-//});
-
 
 
 });
+});
 </script>
+ 
 
   </body>
 </html>
