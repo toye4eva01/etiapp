@@ -13,12 +13,12 @@
     </description>
 
     <author href="http://etisalat.com/ng" email="info@etisalat.com">
-        Airtel
+        etisalat
     </author>
 	
 	<feature name="http://api.phonegap.com/1.0/device" />
 
-   <preference name="phonegap-version" value="3.7.0" />
+   <preference name="phonegap-version" value="cli-5.2.0." />
   
     <preference name="orientation" value="portrait" />      
     <preference name="target-device" value="universal" />     
