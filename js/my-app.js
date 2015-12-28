@@ -295,6 +295,27 @@ $.ajax({
 return false;
 });
 
+
+$('#logout2').click(function(){
+	//alert("logpout");
+$.ajax({
+									//type: "POST",
+									url: "http://rewardsboxnigeria.com/demodiscount/mobi/logout3.php",
+									//data: $("#contact").serialize(),
+									//data: {name:name, email:email, message:message},
+																		
+									success: function(msg){
+									(msg); 
+									$('#loggout').html("You have been Logged out");
+									window.location.replace('index.html');
+																												
+									}	
+	
+
+
+});
+});
+
 $('#logout').click(function(){
 	//alert("logpout");
 $.ajax({

@@ -12,6 +12,7 @@
 
       <div class="page_content" id="loggout"> 
       
+      You have been successfully logged out.
            
       
       
@@ -25,11 +26,29 @@
 </div>
 
 <script>
+
 $(document).ready(function(e) {
+    $.ajax({
+									//type: "POST",
+									url: "http://rewardsboxnigeria.com/demodiscount/mobi/logout3.php",
+									//data: $("#contact").serialize(),
+									//data: {name:name, email:email, message:message},
+																		
+									success: function(msg){
+									(msg); 
+									$('#loggout').html("You have been Logged out");
+									window.location.replace('index.html');
+																												
+									}	
 	
-	//$('#loegout').load('logout3.php');
-	
-   // window.location.replace ('index.html');
+
+
 });
+	
+	
+});
+
+
+
 
 </script>
